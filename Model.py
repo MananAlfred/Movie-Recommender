@@ -62,7 +62,3 @@ if st.button('Recommend'):
     with tab5:
         st.header(names[4])
         st.image(posters[4], use_column_width="auto")
-
-    with tab5:
-        st.header(names[4])
-        st.image(posters[4], width=400)
