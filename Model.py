@@ -45,19 +45,23 @@ if st.button('Recommend'):
 
     with tab1:
         st.header(names[0])
-        st.image(posters[0], width=400)
+        st.image(posters[0], use_column_width="auto")
 
     with tab2:
         st.header(names[1])
-        st.image(posters[1], width=400)
+        st.image(posters[1], use_column_width="auto")
 
     with tab3:
         st.header(names[2])
-        st.image(posters[2], width=400)
+        st.image(posters[2], use_column_width="auto")
 
     with tab4:
         st.header(names[3])
-        st.image(posters[3], width=400)
+        st.image(posters[3], use_column_width="auto")
+
+    with tab5:
+        st.header(names[4])
+        st.image(posters[4], use_column_width="auto")
 
     with tab5:
         st.header(names[4])
