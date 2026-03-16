@@ -15,7 +15,9 @@ similarity = pickle.load(open('similarity.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 def fetchPosterPath(movie_id):
-    res = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=fe0697d3e9e25a36cab128042a6a4822'.format(movie_id))
+    api_key = st.secrets["TMDB_API_KEY"]
+    res = requests.get('https://api.themoviedb.org/3/movie/{}?api_key={}'.format(movie_id, api_key))
+
     data = res.json()
     return 'https://image.tmdb.org/t/p/w500/' + data['poster_path']
 def recommend(movie):
